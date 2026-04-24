@@ -1,0 +1,120 @@
+.lang-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 12, 30, 0.55);
+  backdrop-filter: blur(6px);
+  animation: lang-modal-fade-in 0.2s ease;
+}
+
+@keyframes lang-modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.lang-modal {
+  width: 100%;
+  max-width: 640px;
+  max-height: min(90vh, 720px);
+  overflow: auto;
+  border-radius: 20px;
+  padding: 28px 24px 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lang-modal--light {
+  background: #ffffff;
+  border: 1px solid rgba(139, 120, 220, 0.2);
+  color: #2d2640;
+}
+
+.lang-modal--dark {
+  background: #1e1b2e;
+  border: 1px solid rgba(160, 140, 255, 0.25);
+  color: #e8e6ff;
+}
+
+.lang-modal-title {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.lang-modal-hint {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.65;
+}
+
+.lang-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 12px;
+}
+
+.lang-modal-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 10px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.2s, background 0.2s;
+  font: inherit;
+}
+
+.lang-modal--light .lang-modal-item {
+  background: #f7f4ff;
+  border-color: rgba(139, 120, 220, 0.15);
+  color: #2d2640;
+}
+
+.lang-modal--light .lang-modal-item:hover {
+  background: #ede8ff;
+  border-color: rgba(124, 106, 224, 0.45);
+  transform: translateY(-2px);
+}
+
+.lang-modal--dark .lang-modal-item {
+  background: rgba(108, 99, 255, 0.12);
+  border-color: rgba(160, 140, 255, 0.2);
+  color: #e8e6ff;
+}
+
+.lang-modal--dark .lang-modal-item:hover {
+  background: rgba(108, 99, 255, 0.28);
+  border-color: rgba(180, 170, 255, 0.45);
+  transform: translateY(-2px);
+}
+
+.lang-modal-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.lang-modal-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
+@media (max-width: 480px) {
+  .lang-modal-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

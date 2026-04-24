@@ -1,0 +1,169 @@
+/* Общий контейнер */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  
+  /* Просто сплошной насыщенный фиолетовый */
+  background-color: #6366f1; 
+  /* Если хочешь чуть более глубокий оттенок, используй #4f46e5 */
+}
+
+/* Левая панель */
+.auth-left {
+  flex: 1.2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px;
+}
+
+/* Правая панель */
+.auth-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Карточка остается белой для контраста */
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 24px;
+  /* Усиленная тень, чтобы карточка выделялась на фиолетовом */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 1024px) {
+  .auth-container {
+    background: #f9fafb; /* На планшетах и телефонах убираем сложный фон */
+  }
+  .auth-left { display: none; }
+}
+
+.auth-logo {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  letter-spacing: -1px;
+}
+
+.auth-title {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.auth-list {
+  list-style: none;
+  padding: 0;
+}
+
+.auth-list li {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0.95;
+}
+
+/* Правая панель */
+.auth-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+}
+
+/* Увеличенная карточка */
+.auth-card {
+  width: 100%;
+  max-width: 480px; /* Увеличили ширину формы */
+  background: white;
+  padding: 50px; /* Увеличили внутренние отступы */
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.auth-card h2 {
+  font-size: 32px; /* Заголовок крупнее */
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.auth-subtitle {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* Поля ввода (тоже стали крупнее) */
+.auth-input {
+  width: 100%;
+  padding: 16px 20px; /* Больше комфорта при вводе */
+  margin-bottom: 20px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  background-color: #fcfcfd;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+}
+
+/* Большая кнопка */
+.auth-btn {
+  width: 100%;
+  padding: 18px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.auth-btn:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* Футер */
+.auth-footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.auth-footer span {
+  color: #4f46e5;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.auth-footer span:hover {
+  text-decoration: underline;
+}
